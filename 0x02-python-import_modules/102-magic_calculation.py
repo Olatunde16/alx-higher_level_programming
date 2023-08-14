@@ -3,6 +3,7 @@
 def magic_calculation(a, b):
     """Match bytecode provided by ALX SE Internship Programme."""
     from magic_calculation_102 import add, sub
+    import dis
 
     if a < b:
         c = add(a, b)
@@ -12,3 +13,5 @@ def magic_calculation(a, b):
 
     else:
         return(sub(a, b))
+
+    dis.dis(magic_calculation)
