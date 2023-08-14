@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def magic_calculation(a, b):
-    """Match Bytecode provided by ALX SE program."""
+    """Match bytecode provided by ALX SE Internship Programme."""
     from magic_calculation_102 import add, sub
 
     if a < b:
