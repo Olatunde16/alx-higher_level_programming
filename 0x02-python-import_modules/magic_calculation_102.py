@@ -5,10 +5,10 @@ def magic_calculation():
     import dis
 
     dis.dis(magic_calculation)
-    3           0 LOAD_CONST               1 (0)
-                3 LOAD_CONST               2 (('add', 'sub'))
-                6 IMPORT_NAME              0 (magic_calculation_102)
-                9 IMPORT_FROM              1 (add)
+    3           00 LOAD_CONST               1 (0)
+                 3 LOAD_CONST               2 (('add', 'sub'))
+                06 IMPORT_NAME              0 (magic_calculation_102)
+                 9 IMPORT_FROM              1 (add)
                 12 STORE_FAST               2 (add)
                 15 IMPORT_FROM              2 (sub)
                 18 STORE_FAST               3 (sub)
