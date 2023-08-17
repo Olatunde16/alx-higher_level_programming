@@ -5,7 +5,7 @@ def for_subtracting(list_num):
 
     for n in list_num:
         if max_list > n:
-            for_sub +- n
+            for_sub += n
 
     return (max_list - for_sub)
 
