@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <Python.h>
-#include <bytesobject.h>
 
 /**
-* print_python_bytes - Prints bytes information
-*
-* @p: Python Object
-* Return: no return
-*/
-
+ * print_python_bytes - Prints bytes information
+ *
+ * @p: Python Object
+ * Return: no return
+ */
 void print_python_bytes(PyObject *p)
 {
 	char *string;
@@ -39,17 +37,17 @@ void print_python_bytes(PyObject *p)
 			printf(" %02x", string[i]);
 		else
 			printf(" %02x", 256 + string[i]);
+
 	printf("\n");
 }
 
 /**
-* print_python_list - Prints list information
-*
-* @p: Python Object
-* Return: no return
-*/
-
-void printf_python_list(PyObject *p)
+ * print_python_list - Prints list information
+ *
+ * @p: Python Object
+ * Return: no return
+ */
+void print_python_list(PyObject *p)
 {
 	long int size, i;
 	PyListObject *list;
@@ -67,6 +65,6 @@ void printf_python_list(PyObject *p)
 		obj = ((PyListObject *)p)->ob_item[i];
 		printf("Element %ld: %s\n", i, ((obj)->ob_type)->tp_name);
 		if (PyBytes_Check(obj))
-			printf_python_bytes(obj);
+			print_python_bytes(obj);
 	}
 }
