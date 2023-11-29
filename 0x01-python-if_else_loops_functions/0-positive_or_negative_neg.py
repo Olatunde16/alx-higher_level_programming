@@ -5,4 +5,4 @@ number = random.randint(-10, 10)
 print(f"The number is: {number}")
 
 if number < 0:
-    print("is negative")
+    print(f"{number:d} is negative")
