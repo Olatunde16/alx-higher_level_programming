@@ -2,7 +2,7 @@
 
 def magic_calculation(a, b):
     """Match bytecode provided by ALX SE Internship Programme."""
-    from magic_calculation_102 import add, sub
+    add, sub = __import__('magic_calculation_102', fromlist=('add', 'sub'))
     import dis
 
     if a < b:
