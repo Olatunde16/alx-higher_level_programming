@@ -62,39 +62,3 @@ int is_palindrome(listint_t **head)
 	
 	return (1);  
 }
-
-/**
- * main - Serves as an Example usage
- *
- * Return: 0
- */
-int main() 
-{
-	listint_t *head = malloc(sizeof(listint_t));
-	head->n = 1;
-	head->next = malloc(sizeof(listint_t));
-	head->next->n = 2;
-	head->next->next = malloc(sizeof(listint_t));
-	head->next->next->n = 3;
-	head->next->next->next = malloc(sizeof(listint_t));
-	head->next->next->next->n = 2;
-	head->next->next->next->next = malloc(sizeof(listint_t));
-	head->next->next->next->next->n = 1;
-	head->next->next->next->next->next = NULL;
-	
-	int result = is_palindrome(&head);
-	
-	if (result) 
-		printf("The linked list is a palindrome.\n");
-	else 
-		printf("The linked list is not a palindrome.\n");
-	
-	while (head != NULL) 
-	{
-		listint_t *temp = head;
-		head = head->next;
-		free(temp);
-	}
-	
-	return (0);
-}
