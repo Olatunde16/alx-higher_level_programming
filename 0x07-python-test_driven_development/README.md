@@ -83,4 +83,4 @@ Prototypes for functions written in this project:
 
 * **8. CPython #3: Python Strings**
   * [102-python.c](./102-python.c): C function that prints basic information about Python string objects.
-  * To be Compiled with [gcc -shared -Wl,-soname,libPython.so -o libPython.so -fPIC -I/usr/include/python3.8 102-python.c](https://intranet.alxswe.com/projects/246#:~:text=this%20command%20line%3A-,gcc%20%2Dshared%20%2DWl%2C%2Dsoname%2ClibPython.so%20%2Do%20libPython.so%20%2DfPIC%20%2DI/usr/include/python3.8%20102%2Dpython.c,-julien%40ubuntu%3A~/0x07) since the version is updated
+  * To be Compiled with 'gcc -shared -Wl,-soname,libPython.so -o libPython.so -fPIC -I/usr/include/python3.8 102-python.c' since the version is updated
