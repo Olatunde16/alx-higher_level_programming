@@ -44,7 +44,7 @@ try:
                 parts = log_line.split(" ")
                 size = int(parts[-1])
                 status_code = parts[-2]
-                
+
                 """Update total file size"""
                 total_size += size
 
@@ -58,6 +58,12 @@ try:
             """Reset variables"""
             total_size = 0
             status_code_counts = defaultdict(int)
+            log_lines = []
+
+except KeyboardInterrupt:
+    """Handle keyboard interrupt (CTRL+C)"""
+    handle_interrupt(signal.SIGINT, None)
+
             log_lines = []
 
 except KeyboardInterrupt:
