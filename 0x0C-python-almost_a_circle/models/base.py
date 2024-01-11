@@ -163,11 +163,13 @@ class Base:
         for rect in list_rectangles:
             turt.showturtle()
             turt.up()
+            turt.delay()
             turt.goto(rect.x, rect.y)
             turt.down()
             for i in range(2):
                 turt.forward(rect.width)
                 turt.left(90)
+                turt.tracer()
                 turt.forward(rect.height)
                 turt.left(90)
             turt.hideturtle()
@@ -181,6 +183,7 @@ class Base:
             for i in range(2):
                 turt.forward(sq.width)
                 turt.left(90)
+                turt.update()
                 turt.forward(sq.height)
                 turt.left(90)
             turt.hideturtle()
