@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Defines a base model class."""
 import json
 import csv
@@ -7,12 +6,12 @@ import turtle
 
 
 class Base:
-    """Base model.
+    """Represent the base model.
 
-    This Represents the "base" for all other classes in project 0x0C*.
+    Represents the "base" for all other classes in project 0x0C*.
 
-    Private Class Attributes:
-        __nb_object (int): Number of instantiated Bases.
+    Attributes:
+        __nb_objects (int): The number of instantiated Bases.
     """
 
     __nb_objects = 0
@@ -163,13 +162,11 @@ class Base:
         for rect in list_rectangles:
             turt.showturtle()
             turt.up()
-            turt.delay()
             turt.goto(rect.x, rect.y)
             turt.down()
             for i in range(2):
                 turt.forward(rect.width)
                 turt.left(90)
-                turt.tracer()
                 turt.forward(rect.height)
                 turt.left(90)
             turt.hideturtle()
@@ -183,7 +180,6 @@ class Base:
             for i in range(2):
                 turt.forward(sq.width)
                 turt.left(90)
-                turt.update()
                 turt.forward(sq.height)
                 turt.left(90)
             turt.hideturtle()
