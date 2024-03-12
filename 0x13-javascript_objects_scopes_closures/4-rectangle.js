@@ -8,15 +8,16 @@ class Rectangle {
   }
 
   print () {
-    if (!this.width || !this.height) {
-      return;
-    }
     for (let i = 0; i < this.height; i++) {
-      console.log('X'.repeat(this.width));
+      let s = '';
+      for (let j = 0; j < this.width; j++) {
+        s += 'X';
+      }
+      console.log(s);
     }
   }
 
-    rotate () {
+  rotate () {
     const aux = this.width;
     this.width = this.height;
     this.height = aux;
