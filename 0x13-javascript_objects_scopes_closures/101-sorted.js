@@ -1,17 +1,14 @@
 #!/usr/bin/node
-const dict = require('./101-data').dict;
+const dict = require('./101-data');
 
-const totalist = Object.entries(dict);
-const vals = Object.values(dict);
-const valsUniq = [...new Set(vals)];
-const newDict = {};
-for (const j in valsUniq) {
-  const list = [];
-  for (const k in totalist) {
-    if (totalist[k][1] === valsUniq[j]) {
-      list.unshift(totalist[k][0]);
+const usersByOccurrence = {};
+
+for (const userId in dict) {
+    const occurrence = dict[userId];
+    if (!usersByOccurrence[occurrence]) {
+        usersByOccurrence[occurrence] = [];
     }
-  }
-  newDict[valsUniq[j]] = list;
+    usersByOccurrence[occurrence].push(userId);
 }
-console.log(newDict);
+
+console.log(usersByOccurrence);
