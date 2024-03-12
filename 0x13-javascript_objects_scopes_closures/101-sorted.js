@@ -1,14 +1,14 @@
 #!/usr/bin/node
-const dict = require('./101-data');
+const dictInput = require('./101-data').dict;
+const outDict = {};
 
-const usersByOccurrence = {};
-
-for (const userId in dict) {
-    const occurrence = dict[userId];
-    if (!usersByOccurrence[occurrence]) {
-        usersByOccurrence[occurrence] = [];
+for (const key in dictInput) {
+  const ocurr = dictInput[key];
+  outDict[ocurr] = [];
+  for (const keys in dictInput) {
+    if (dictInput[keys] === ocurr) {
+      outDict[ocurr].push(keys);
     }
-    usersByOccurrence[occurrence].push(userId);
+  }
 }
-
-console.log(usersByOccurrence);
+console.log(outDict);
