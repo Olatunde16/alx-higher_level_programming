@@ -1,14 +1,9 @@
 #!/usr/bin/node
-const size = parseInt(process.argv[2]);
-
-if (!isNaN(size)) {
-    for (let i = 0; i < size; i++) {
-        let line = '';
-        for (let j = 0; j < size; j++) {
-            line += 'X';
-        }
-        console.log(line);
-    }
+const x = Math.floor(Number(process.argv[2]));
+if (isNaN(x)) {
+  console.log('Missing number of occurrences');
 } else {
-    console.log("Missing size");
+  for (let i = 0; i < x; i++) {
+    console.log('C is fun');
+  }
 }
